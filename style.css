@@ -174,6 +174,10 @@ body::before {
   transition: all 0.3s;
 }
 
+/* Brand colors */
+.social-icons a.linkedin { color: #0A66C2; }    /* LinkedIn blue */
+.social-icons a.email { color: #D44638; }       /* Gmail red */
+
 .social-icons a:hover {
   color: #00d4ff;
   transform: translateY(-5px) scale(1.2);
@@ -186,6 +190,13 @@ body::before {
   border-radius: 15px;
   transition: 0.4s;
 }
+.skill .java { color: #007396; }
+.skill .html { color: #E34F26; }
+.skill .css { color: #1572B6; }
+.skill .js { color: #F7DF1E; }
+.skill .git { color: #F05032; }
+.skill .spring { color: #6DB33F; }
+.skill .database { color: #363f7f; }
 
 .skill:hover {
   background: rgba(255,255,255,0.05);
@@ -198,8 +209,8 @@ body::before {
 
 /* ===== TIMELINE ===== */
 .timeline {
-  border-left: 2px solid rgba(0,212,255,0.4);
-  padding-left: 20px;
+  border-left: 3px solid rgba(0,212,255,0.4);
+  padding-left: 30px;
 }
 
 .timeline-item {
@@ -210,13 +221,69 @@ body::before {
 .timeline-item::before {
   content: "";
   position: absolute;
-  left: -10px;
+  left: -20px;
   top: 5px;
   width: 12px;
   height: 12px;
   background: #00d4ff;
   border-radius: 50%;
   box-shadow: 0 0 10px #00d4ff;
+}
+
+/* ===== CERTIFICATIONS ===== */
+.certification-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+
+  background: rgba(20, 25, 50, 0.95); /* dark, readable */
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 25px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+/* Glow border */
+.certification-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(120deg, #00d4ff, #6a5cff);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  pointer-events: none;
+}
+
+.certification-card h5 {
+  font-weight: 600;
+  margin-bottom: 8px;
+  background: linear-gradient(90deg, #00d4ff, #6a5cff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.certification-card p {
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+.certification-card .btn-sm {
+  padding: 6px 16px;
+  font-size: 0.85rem;
+  color: #fff;
+  background: linear-gradient(135deg,#00d4ff,#6a5cff);
+  border: none;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.certification-card .btn-sm:hover {
+  box-shadow: 0 0 20px rgba(0,212,255,0.7);
+  transform: translateY(-2px);
 }
 
 /* ===== FOOTER ===== */
