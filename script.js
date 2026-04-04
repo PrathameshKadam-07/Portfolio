@@ -43,7 +43,7 @@ function typeEffect() {
     if (!deleting) i = (i + 1) % words.length;
   }
 
-  setTimeout(typeEffect, deleting ? 40 : 90);
+  setTimeout(typeEffect, deleting ?  60 : 120);
 }
 typeEffect();
 
