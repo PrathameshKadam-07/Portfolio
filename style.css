@@ -398,11 +398,3 @@ body::before {
     right: 25px;
   }
 }
-
-html {
-  scroll-behavior: smooth;
-}
-
-#project {
-  scroll-margin-top: 100px; /* adjust for navbar height */
-}
