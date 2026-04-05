@@ -5,7 +5,6 @@ body {
   color: #e2e8f0;
   overflow-x: hidden;
 }
-
 /* Soft glow background overlay */
 body::before {
   content: "";
@@ -398,4 +397,12 @@ body::before {
     bottom: 25px;
     right: 25px;
   }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#project {
+  scroll-margin-top: 100px; /* adjust for navbar height */
 }
