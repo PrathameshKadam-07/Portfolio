@@ -84,8 +84,10 @@ document.querySelectorAll(".btn-glow").forEach(btn => {
     btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
   });
 
-  btn.addEventListener("mouseleave", () => {
-    btn.style.transform = "translate(0,0)";
-  });
+btn.addEventListener("scroll", () => {
+  btn.style.display = window.scrollY > 300 ? "flex" : "none";
+});
+
+btn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
