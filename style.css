@@ -6,11 +6,6 @@ body {
   overflow-x: hidden;
 }
 
-#projects {
-  scroll-margin-top: 100px;
-}
-
-
 /* Soft glow background overlay */
 body::before {
   content: "";
